@@ -1,0 +1,10 @@
+{
+  "name": "bukvapark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Детская библиотека игр с алфавитом",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js"
+  }
+}
