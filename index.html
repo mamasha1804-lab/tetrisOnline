@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bright alphabet games for young learners" />
+    <title>Letter Land — Play with ABCs!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="clinic">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Letter Land home">
+        <span class="brand__mark">L</span>
+        <span>Letter Land</span>
+      </a>
+      <nav class="concept-nav" aria-label="Choose a game world">
+        <button class="concept-tab is-active" data-theme="clinic"><b>01</b> Pet Clinic</button>
+        <button class="concept-tab" data-theme="islands"><b>02</b> Fun Island</button>
+        <button class="concept-tab" data-theme="city"><b>03</b> Happy Town</button>
+        <button class="concept-tab" data-theme="space"><b>04</b> Space Trip</button>
+        <button class="concept-tab" data-theme="lab"><b>05</b> Magic Lab</button>
+      </nav>
+      <button class="profile" aria-label="Player profile"><span>⭐</span><b>12</b><i>M</i></button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-shape hero-shape--one"></div><div class="hero-shape hero-shape--two"></div>
+        <div class="eyebrow"><span></span><b id="conceptNumber">WORLD 01</b></div>
+        <div class="hero__copy">
+          <h1 id="heroTitle">Help cute pets.<br /><em>Learn new words!</em></h1>
+          <p id="heroText">Pick a pet, find the right letters, and make your new friend smile again!</p>
+          <a class="hero-button" href="#gamesTitle">Let’s play <span>→</span></a>
+        </div>
+        <div class="mascot" aria-hidden="true">
+          <div class="spark spark--one">✦</div><div class="spark spark--two">✦</div>
+          <div class="mascot__ears"><i></i><i></i></div>
+          <div class="mascot__head"><span class="eye"></span><span class="eye"></span><b></b><em></em></div>
+          <div class="mascot__body"><span>+</span></div>
+          <div class="mascot__shadow"></div>
+        </div>
+      </section>
+
+      <section class="games" aria-labelledby="gamesTitle">
+        <div class="section-heading">
+          <div><span class="mini-label">FUN GAMES</span><h2 id="gamesTitle">Pick your next game</h2></div>
+          <div class="progress"><span>Your progress</span><div><i style="width: 58%"></i></div><b>7 / 12</b></div>
+        </div>
+        <div class="game-grid" id="gameGrid"></div>
+      </section>
+    </main>
+
+    <dialog class="game-dialog" id="gameDialog" aria-labelledby="dialogTitle">
+      <button class="dialog-close" type="button" aria-label="Close game">×</button>
+      <span class="dialog-label">QUICK GAME</span>
+      <h2 id="dialogTitle">Find the word</h2>
+      <p id="dialogPrompt"></p>
+      <div class="answers" id="answers"></div>
+      <p class="game-result" id="gameResult" aria-live="polite"></p>
+    </dialog>
+
+    <footer><span>Learn, laugh, and play every day!</span><b>© 2026 Letter Land</b><span>Made for ages 6–9</span></footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>
